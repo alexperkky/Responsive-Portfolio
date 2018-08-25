@@ -51,7 +51,7 @@ h2, h3 {
     color: #ffffff;
     overflow: auto;
     border-bottom: 2px solid #cccccc;
-    position: fixed;
+    position: static;
     width: 100%;
 }
 
@@ -90,7 +90,6 @@ nav a:first-child {
 
 /*main*/
 #main-container {
-    padding-top: 130px;
     background-image: url(..assets/images/gravel.png);
     margin-left: 280px;
     margin-right: 280px;
@@ -154,6 +153,7 @@ footer {
     color: #cccccc;
     font-size: 12px;
     text-align: center;
+    position: sticky;
 }
 
 /*portfolio*/
@@ -227,4 +227,44 @@ input[type=submit] {
     font-size: 18px;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 640px) {
+    #main-container{max-width: 640px;
+    margin: 0;
+    }
+    .sidebar{
+        float: left;
+    }
+    #masthead{
+        width: 100%;
+    }
+    #logo{
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-container{
+        max-width: 768px;
+        margin: 0;
+    }
+    .sidebar{
+        float: left;
+    }
+    .work img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 980px) {
+    #main-container{
+        max-width: 980px;
+        margin: 0;
+    }
 }
